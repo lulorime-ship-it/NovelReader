@@ -1,0 +1,394 @@
+/* ===========================
+   Novel Reader 全局样式表
+   =========================== */
+
+/* ---------- 全局 ---------- */
+* {
+    font-family: "Microsoft YaHei", "Segoe UI", "PingFang SC", sans-serif;
+}
+
+QMainWindow, QWidget {
+    background-color: #f5f6fa;
+    color: #2c3e50;
+}
+
+/* ---------- 侧边栏 ---------- */
+QFrame#sidebar {
+    background-color: #ffffff;
+    border-right: 1px solid #e4e7ed;
+}
+
+QPushButton#navButton {
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 16px;
+    text-align: left;
+    color: #5a6675;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+QPushButton#navButton:hover {
+    background-color: #f0f2f5;
+    color: #2c3e50;
+}
+
+QPushButton#navButton:checked {
+    background-color: #eef2ff;
+    color: #6366f1;
+    font-weight: 600;
+}
+
+QLabel#sidebarTitle {
+    color: #1e293b;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 16px 16px 8px 16px;
+}
+
+QLabel#sidebarSubtitle {
+    color: #94a3b8;
+    font-size: 12px;
+    padding: 0 16px 16px 16px;
+}
+
+/* ---------- 顶栏 ---------- */
+QFrame#topbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e4e7ed;
+}
+
+QLineEdit#searchBox {
+    background-color: #f1f3f5;
+    border: 1px solid transparent;
+    border-radius: 18px;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #2c3e50;
+    selection-background-color: #6366f1;
+}
+
+QLineEdit#searchBox:focus {
+    background-color: #ffffff;
+    border: 1px solid #6366f1;
+}
+
+QPushButton#iconButton {
+    background-color: transparent;
+    border: none;
+    border-radius: 16px;
+    min-width: 32px;
+    max-width: 32px;
+    min-height: 32px;
+    max-height: 32px;
+    color: #64748b;
+    font-size: 16px;
+}
+
+QPushButton#iconButton:hover {
+    background-color: #f0f2f5;
+    color: #2c3e50;
+}
+
+QPushButton#primaryButton {
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+QPushButton#primaryButton:hover {
+    background-color: #4f46e5;
+}
+
+QPushButton#primaryButton:pressed {
+    background-color: #4338ca;
+}
+
+/* ---------- 书架卡片 ---------- */
+QListWidget#bookList {
+    background-color: transparent;
+    border: none;
+    outline: 0;
+    padding: 8px;
+}
+
+QListWidget#bookList::item {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+QScrollArea, QScrollArea > QWidget > QWidget {
+    background-color: transparent;
+    border: none;
+}
+
+QScrollBar:vertical {
+    background: transparent;
+    width: 8px;
+    margin: 0;
+}
+QScrollBar::handle:vertical {
+    background: #cbd5e1;
+    border-radius: 4px;
+    min-height: 30px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #94a3b8;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    background: none; height: 0;
+}
+
+QScrollBar:horizontal {
+    background: transparent;
+    height: 8px;
+    margin: 0;
+}
+QScrollBar::handle:horizontal {
+    background: #cbd5e1;
+    border-radius: 4px;
+    min-width: 30px;
+}
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    background: none; width: 0;
+}
+
+/* ---------- 书籍卡片 ---------- */
+QFrame#bookCard {
+    background-color: #ffffff;
+    border: 1px solid #e4e7ed;
+    border-radius: 10px;
+}
+
+QFrame#bookCard:hover {
+    border: 1px solid #6366f1;
+    background-color: #fafbff;
+}
+
+QLabel#bookTitle {
+    color: #1e293b;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+QLabel#bookAuthor {
+    color: #64748b;
+    font-size: 12px;
+}
+
+QLabel#bookProgress {
+    color: #6366f1;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+QProgressBar#bookProgressBar {
+    background-color: #f1f3f5;
+    border: none;
+    border-radius: 3px;
+    height: 6px;
+    text-align: center;
+}
+QProgressBar#bookProgressBar::chunk {
+    background-color: #6366f1;
+    border-radius: 3px;
+}
+
+/* ---------- 章节列表 ---------- */
+QListWidget#chapterList {
+    background-color: #ffffff;
+    border: none;
+    outline: 0;
+}
+
+QListWidget#chapterList::item {
+    padding: 12px 16px;
+    border-bottom: 1px solid #f1f3f5;
+    color: #475569;
+}
+
+QListWidget#chapterList::item:hover {
+    background-color: #f8fafc;
+}
+
+QListWidget#chapterList::item:selected {
+    background-color: #eef2ff;
+    color: #6366f1;
+    font-weight: 600;
+}
+
+/* ---------- 阅读视图 ---------- */
+QFrame#readerArea {
+    background-color: #fafafa;
+}
+
+QTextBrowser#readerText {
+    background-color: transparent;
+    border: none;
+    padding: 40px 60px;
+    color: #2c3e50;
+    selection-background-color: #6366f1;
+    selection-color: white;
+}
+
+QFrame#readerToolbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #e4e7ed;
+}
+
+QFrame#readerBottomBar {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-top: 1px solid #e4e7ed;
+}
+
+QSlider#readerSlider::groove:horizontal {
+    height: 4px;
+    background: #e4e7ed;
+    border-radius: 2px;
+}
+QSlider#readerSlider::handle:horizontal {
+    background: #6366f1;
+    width: 14px;
+    height: 14px;
+    margin: -5px 0;
+    border-radius: 7px;
+}
+QSlider#readerSlider::sub-page:horizontal {
+    background: #6366f1;
+    border-radius: 2px;
+}
+
+/* ---------- 设置面板 ---------- */
+QDialog, QFrame#settingsPanel {
+    background-color: #ffffff;
+}
+
+QLabel#settingsTitle {
+    color: #1e293b;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 8px 0;
+}
+
+QLabel#settingsLabel {
+    color: #475569;
+    font-size: 13px;
+}
+
+QComboBox, QSpinBox, QFontComboBox {
+    background-color: #f8fafc;
+    border: 1px solid #e4e7ed;
+    border-radius: 6px;
+    padding: 6px 10px;
+    min-height: 20px;
+    color: #2c3e50;
+}
+QComboBox:hover, QSpinBox:hover, QFontComboBox:hover {
+    border: 1px solid #cbd5e1;
+}
+QComboBox:focus, QSpinBox:focus, QFontComboBox:focus {
+    border: 1px solid #6366f1;
+    background-color: #ffffff;
+}
+QComboBox::drop-down {
+    border: none;
+    width: 24px;
+}
+QComboBox QAbstractItemView {
+    background-color: #ffffff;
+    border: 1px solid #e4e7ed;
+    selection-background-color: #eef2ff;
+    selection-color: #6366f1;
+    outline: 0;
+}
+
+QPushButton#themeChip {
+    background-color: #f1f3f5;
+    border: 2px solid transparent;
+    border-radius: 18px;
+    padding: 6px 14px;
+    color: #475569;
+    font-size: 12px;
+}
+QPushButton#themeChip:checked {
+    background-color: #eef2ff;
+    border: 2px solid #6366f1;
+    color: #6366f1;
+    font-weight: 600;
+}
+
+/* ---------- 提示信息 ---------- */
+QToolTip {
+    background-color: #1e293b;
+    color: #ffffff;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+QStatusBar {
+    background-color: #ffffff;
+    color: #64748b;
+    border-top: 1px solid #e4e7ed;
+}
+
+/* ---------- 空状态 ---------- */
+QLabel#emptyTitle {
+    color: #94a3b8;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+QLabel#emptySubtitle {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+/* ---------- 标签页 ---------- */
+QTabWidget::pane {
+    border: none;
+}
+QTabBar::tab {
+    background: transparent;
+    color: #64748b;
+    padding: 8px 18px;
+    border-bottom: 2px solid transparent;
+    font-size: 13px;
+    font-weight: 500;
+}
+QTabBar::tab:hover {
+    color: #2c3e50;
+}
+QTabBar::tab:selected {
+    color: #6366f1;
+    border-bottom: 2px solid #6366f1;
+    font-weight: 600;
+}
+
+/* ---------- 列表 ---------- */
+QListWidget#bookmarkList {
+    background-color: #ffffff;
+    border: 1px solid #e4e7ed;
+    border-radius: 8px;
+    outline: 0;
+}
+QListWidget#bookmarkList::item {
+    padding: 10px 14px;
+    border-bottom: 1px solid #f1f3f5;
+    color: #475569;
+}
+QListWidget#bookmarkList::item:hover {
+    background-color: #f8fafc;
+}
+QListWidget#bookmarkList::item:selected {
+    background-color: #eef2ff;
+    color: #6366f1;
+}
